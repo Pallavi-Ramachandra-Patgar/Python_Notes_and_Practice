@@ -1,23 +1,20 @@
-'''The game()function in a program lets a user play a game and returns the score as an integer.
-You need to read a file 'Hi-score.txt' which is either blank or containes the previous Hi-score.
-You need to write a program to update the hi_score whenever the game ()function breaks the 
-Hi-score '''
+'''Write a program to open file1.txt, 2.txt and 3.txt if any these files are not 
+present, a message without exiting the program must be printed promoting the same.'''
 
-import random
-def game():
-    print("You are playing game")
-    score = random.randint(1,62)
+try:
+    with open("1.txt","r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
+try:
+    with open("2.txt","r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
+try:
+    with open("3.txt","r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-    with open("highscore.txt") as f:
-        highscore = f.read()
-        if (highscore!=""):
-            highscore = int(highscore)
-        else:
-            highscore= 0
-    print(f"Your score:{score}")
-    if(score>highscore):
-        with open("Highscore.txt","w") as f:
-            f.write(str(score))
-        return
-game()
-
+print("Thankyou")    

@@ -1,9 +1,7 @@
-'''A file contain a word "Donkey" multiple times. You need to write a program which 
-replace this word with #### by updating the same file'''
+'''Write a list comprehension to print a list which contain the multiplication 
+table of a user entered number'''
 
-word = "Donkey"
-with open("file.txt","r") as f:
-    content = f.read()
-contentnew = content.replace(word,"####")
-with open("file.txt","w") as f:
-    f.write(contentnew)
+n = int(input("Enter a number: "))
+
+table = [n*i for i in range (1,11)]
+print(table)

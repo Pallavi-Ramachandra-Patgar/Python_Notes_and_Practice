@@ -1,13 +1,11 @@
-'''Write a python function to remove a givem word from a list ad strip it at the 
-same time'''
-def rem(l,word):
-    n =[]
-    for item in l:
-        if not(item == word):
-            n.append(item.strip(word))
-    return n
-        
-l = ["Shubham","Shivam","Ramchandra","Indumati","Vamshi","amruta"]
-print(rem(l,"am"))
-
-#o/p : ['Shubh', 'Shiv', 'Ramchandr', 'Indumati', 'Vamshi', 'rut']
+'''Override the __len__()method on vector of problem 5 to display the dimension of the
+vector'''
+class Vector:
+    def __init__(self,l):
+        self.l = l
+    def __len__(self):
+        return len(self.l)
+    
+#Test the implimentation
+V1 = Vector([1,2,3])
+print(len(V1))

@@ -1,11 +1,8 @@
-'''Repeat a program 4 for a list of such words to be censore'''
-
-words = ["Donkey","dirty","fool"]
-
-with open("file.txt","r") as f:
-    content = f.read()
-for word in words:
-    content = content.replace(word,"#" * len(word))
-
-with open("file.txt","w") as f:
-    f.write(content)
+'''Write a program to display a/b where a and b are integers.if b=0, display 
+infinit by handling the 'ZeroDivisionError' '''
+try:
+    a = int(input("Enter a: "))
+    b = int(input("Enter b: "))
+    print(a/b)
+except ZeroDivisionError as v:
+    print("Infinite")
